@@ -1,0 +1,140 @@
+.App {
+	max-width: 40rem;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.App::before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 50%;
+	z-index: -1;
+	height: 100%;
+	width: 1px;
+	background-color: rgba(255, 255, 255, 0.2);
+}
+
+.teams {
+	display: flex;
+	justify-content: space-around;
+	align-items: stretch;
+	width: 100%;
+}
+.teamA {
+}
+.App-title {
+	font-size: 1.5em;
+}
+
+.App-intro {
+	font-size: large;
+}
+
+@keyframes App-logo-spin {
+	from {
+		transform: rotate(0deg);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
+
+.teamsList {
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 3rem;
+}
+
+.player {
+	padding: 1rem;
+}
+
+.left {
+	width: 50%;
+	align-self: flex-start;
+}
+.right {
+	width: 50%;
+	align-self: flex-end;
+}
+
+.total {
+	font-size: 16px;
+	width: 100%;
+}
+.clearfix:before,
+.clearfix:after {
+	content: "";
+	display: table;
+}
+
+.l-inline {
+	display: flex;
+}
+.l-inline > * + * {
+	margin-left: 1rem;
+}
+
+.toggle-button {
+}
+.toggle-button input {
+	width: 0;
+	height: 0;
+	opacity: 0;
+}
+.toggle-text {
+	padding: 0.4rem 0.8rem;
+	border-radius: 100px;
+	color: rgba(255, 255, 255, 0.2);
+}
+.toggle-button input:checked + .toggle-text {
+	background: rgba(0, 0, 0, 0.2);
+	color: white;
+}
+
+.l-p {
+	padding: 1rem;
+}
+
+.bar {
+	padding: 1rem 0;
+	display: flex;
+}
+
+.teamA-bar,
+.teamB-bar {
+	border-radius: 100px;
+	transition: width 0.3s ease-in-out;
+	min-height: 1rem;
+	margin: 0 3px;
+}
+.teamA-bar {
+	background: #00baff;
+}
+.teamB-bar {
+	background: #ffba00;
+}
+
+button {
+	color: white;
+	background: #06131b;
+	border-radius: 100px;
+	border: 0;
+	font-size: 18px;
+	padding: 1rem 2rem;
+	transition: transform 0.2s ease-in-out;
+}
+button:active {
+	transform: scale(0.9);
+}
+button:focus {
+	outline: none;
+}
+
+.reservers {
+	display: flex;
+	flex-wrap: wrap;
+	padding: 1rem 0;
+	color: rgba(255, 255, 255, 0.4);
+}
